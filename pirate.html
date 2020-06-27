@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Convert Normal Speech to Pirate Speech!</title>
+		<style type="text/css">
+			textarea
+			{
+				width: 400px;
+				height: 200px;
+				font-family: arial;
+			}
+		</style>
+		<script 
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#normal").keyup(function(){
+					var words = $("#normal").val();
+					words = words.replace(/hello/gi, "ahoy");
+					words = words.replace(/your/gi, "yer");
+					words = words.replace(/you/gi, "ye");
+					words = words.replace(/to/gi, "ter");
+					words = words.replace(/my/gi, "me");
+					words = words.replace(/wow/gi, "blimey");
+					words = words.replace(/stop/gi, "avast");
+					words = words.replace(/ocean/gi, "briney deep");
+					words = words.replace(/sword/gi, "cutlass");
+					words = words.replace(/^/, "Arr, me hearties. ");
+					words = words.replace(/(\w+)ev(\w+)\s/g, "$1e'$2 ");
+					$("#pirate").val(words);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Landlubbers</h2>
+		<textarea id="normal"></textarea>
+		<h2>Pirates</h2>
+		<textarea id="pirate"></textarea>
+	</body>
+</html>
