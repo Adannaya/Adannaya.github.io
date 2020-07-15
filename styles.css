@@ -3,6 +3,10 @@ body {
   /*margin: 0; /*No way am I getting rid of those cute white gaps!*/
   font-family: 'Montserrat', sans-serif;
 }
+img {
+  max-width: 100%;
+  display: block;
+}
 #header {
   background-color: #1abc9c;
   height: 150px;
